@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'Header': typeof import("../components/Header.vue")['default']
     'Map': typeof import("../components/Map.vue")['default']
+    'Route': typeof import("../components/Route.vue")['default']
     'Subtitle': typeof import("../components/Subtitle.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyHeader': typeof import("../components/Header.vue")['default']
     'LazyMap': typeof import("../components/Map.vue")['default']
+    'LazyRoute': typeof import("../components/Route.vue")['default']
     'LazySubtitle': typeof import("../components/Subtitle.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -48,6 +50,7 @@ declare module 'vue' {
 
 export const Header: typeof import("../components/Header.vue")['default']
 export const Map: typeof import("../components/Map.vue")['default']
+export const Route: typeof import("../components/Route.vue")['default']
 export const Subtitle: typeof import("../components/Subtitle.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
@@ -69,6 +72,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyMap: typeof import("../components/Map.vue")['default']
+export const LazyRoute: typeof import("../components/Route.vue")['default']
 export const LazySubtitle: typeof import("../components/Subtitle.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/layout")['default']
