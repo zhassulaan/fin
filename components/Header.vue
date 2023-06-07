@@ -1,21 +1,21 @@
 <template>
-  <header class="header">
+  <header class="header container">
     <img
-      src="@/public/logo.svg"
+      src="@/logo.svg"
       alt="Logo"
       class="header-logo"
     />
     <ul class="header-list">
       <li class="header-list-item">
-        <NuxtLink to="/">Алматы</NuxtLink>
+        <NuxtLink to="/almaty">Алматы</NuxtLink>
       </li>
       <li class="header-list-item">
-        <NuxtLink to="/">Астана</NuxtLink>
+        <NuxtLink to="/astana">Астана</NuxtLink>
       </li>
       <li class="header-list-item">
         <NuxtLink to="/">Другие</NuxtLink>
         <img
-          src="@/public/arrow.svg"
+          src="@/arrow.svg"
           alt="arrow"
         />
       </li>
@@ -28,11 +28,16 @@
 
 <style scoped>
   .header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 63.3334%;
     height: 152px;
     margin-top: 30px;
+  }
+  .header-logo {
+    background-blend-mode: darken;
   }
   .header-list {
     display: flex;
