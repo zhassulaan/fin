@@ -1,3 +1,3 @@
 <template>
-  <Main :id="'taraz'" />
+  <Details :id="'taraz'" />
 </template>

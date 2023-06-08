@@ -9,7 +9,7 @@
     <div class="detail-content container">
       <div class="detail-content-text">
         <h2 class="detail-content-title title">{{ detail.name }}</h2>
-        <Subtitle class="detail-content-subtitle" :text="`Маршрут номер ${detail.id}`" />
+        <Subtitle class="detail-content-subtitle" :text="`Маршрут номер ${ detail.id }`" />
         <p class="detail-content-paragraph">{{ detail.text }}</p>
       </div>
       <img
