@@ -2,7 +2,6 @@
   import { routes } from '../../data';
   const route = useRoute();
   const detail = routes.find(item => item.id == route.params.id);
-  console.log(detail);
 </script>
 
 <template>
@@ -11,7 +10,7 @@
       <div class="detail-content-text">
         <h2 class="detail-content-title title">{{ detail.name }}</h2>
         <Subtitle class="detail-content-subtitle" :text="`Маршрут номер ${detail.id}`" />
-        <p class="detail-content-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="detail-content-paragraph">{{ detail.text }}</p>
       </div>
       <img
         :src="detail.src"
