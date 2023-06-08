@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{ 'active': scrolled }">
-    <Logo />
+    <Logo class="header-logo" />
     <ul class="header-list">
       <li class="header-list-item">
         <NuxtLink to="/almaty">Алматы</NuxtLink>
@@ -18,37 +18,6 @@
   </header>
 </template>
 
-<style scoped>
-  .header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 18.3334%;
-    height: 182px;
-    margin-top: 30px;
-    z-index: 5;
-    transition: all .3s;
-  }
-  .active {
-    margin-top: 0;
-    background: #fff;
-  }
-  .header-list {
-    display: flex;
-    gap: 49px;
-  }
-  .header-list-item {
-    display: flex;
-    gap: 13px;
-    line-height: 22px;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
-  }
-</style>
-
 <script>
   import Dropdown from '~/components/Dropdown.vue';
 
@@ -62,17 +31,48 @@
       }
     },
     mounted() {
-      window?.addEventListener('scroll', this.handleScroll);
+      window?.addEventListener('scroll', this.handle_scroll);
     },
     beforeDestroy() {
-      window?.removeEventListener('scroll', this.handleScroll);
+      window?.removeEventListener('scroll', this.handle_scroll);
     },
     methods: {
-      handleScroll(event) {
+      handle_scroll(event) {
         event.preventDefault(); 
-        const scrollPosition = window?.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        this.scrolled = scrollPosition > 15;
+        const scroll_position = window?.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        this.scrolled = scroll_position > 15;
       },
     }
   };
 </script>
+
+<style scoped>
+  .header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .5em 18.3334%;
+    height: 182px;
+    margin-top: 1.375em;
+    z-index: 5;
+    transition: all .25s;
+  }
+  .active {
+    margin-top: 0;
+    background: #fff;
+  }
+  .header-list {
+    display: flex;
+    gap: 2.55208vw;
+  }
+  .header-list-item {
+    display: flex;
+    gap: .68802vw;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+  }
+</style>
