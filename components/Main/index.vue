@@ -58,93 +58,124 @@
   };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .main {
     background-image: url("@/banner.svg");
     background-repeat: no-repeat;
     background-size: contain;
-  }
-  .main-hero_content {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25.1765vh 0 11.7647vh;
-    margin-right: 17.0834%;
-  }
-  .main-hero_content-text {
-    margin: 30px 0 0 .8854vw;
-  }
-  .main-hero_content-title {
-    line-height: 88px;
-    letter-spacing: .09em;
-    margin: 0 0 9px .41666vw;
-  }
-  .main-about_content {
-    display: grid;
-    grid-template-areas: 
-      'image text'
-      'download download';
-    justify-content: space-between;
-    padding-top: 160px;
-  }
-  .main-about_content-image,
-  .main-info_content-image {
-    grid-area: image;
-    width: 460px;
-	  height: 529px;
-    margin-top: 3px;
-  }
-  .main-about_content-text,
-  .main-info_content-text {
-    width: 701px;
-    grid-area: text;
-  }
-  .main-about_content-paragraph,
-  .main-info_content-paragraph {
-    line-height: 27.72px;
-  }
-  .main-about_content-paragraph:last-child,
-  .main-info_content-paragraph:last-child {
-    font-weight: 600;
-    color: #5C5754;
-  }
-  .main-about_content-download {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: download;
-    width: 100%;
-    border: 3px dashed #AB9995;
-    border-radius: 30px;
-    margin-top: 71px;
-    padding: 23px 271px 23px 268px;
-  }
-  .main-about_content-download-text {
-    line-height: 28px;
-    font-family: 'komika_axis_cyr';
-    font-size: 18px;
-    font-weight: 400;
-  }
-  .main-route_content {
-    margin-top: 157px;
-  }
-  .main-route_content-title {
-    text-align: center;
-    line-height: 31px;
-    margin-bottom: 41px;
-  }
-  .main-info_content {
-    display: grid;
-    grid-template-areas: 
-      'title title'
-      'text image';
-    justify-content: space-between;
-    padding: 128px 0 162.02px;
-  }
-  .main-info_content-title {
-    grid-area: title;
-    text-align: center;
-    margin: 55px 0;
+
+    &-hero_content {
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25.1765vh 0 11.7647vh;
+      margin-right: 17.0834%;
+
+      &-text {
+        margin: 30px 0 0 .8854vw;
+      }
+      
+      &-title {
+        line-height: 88px;
+        letter-spacing: .09em;
+        margin: 0 0 9px .41666vw;
+      }
+    }
+
+    &-about_content {
+      display: grid;
+      grid-template-areas: 
+        'image text'
+        'download download';
+      justify-content: space-between;
+      padding-top: 160px;
+
+      &-image {
+        grid-area: image;
+        width: 460px;
+        height: 529px;
+        margin-top: 3px;
+      }
+
+      &-text {
+        width: 701px;
+        grid-area: text;
+      }
+
+      &-paragraph {
+        line-height: 27.72px;
+
+        &:last-child {
+          font-weight: 600;
+          color: #5C5754;
+        }
+      }
+
+      &-download {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: download;
+        width: 100%;
+        border: 3px dashed #AB9995;
+        border-radius: 30px;
+        margin-top: 71px;
+        padding: 23px 271px 23px 268px;
+
+        &-text {
+          line-height: 28px;
+          font-family: 'komika_axis_cyr';
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &-route_content {
+      margin-top: 157px;
+
+      &-title {
+        text-align: center;
+        line-height: 31px;
+        margin-bottom: 41px;
+      }
+    }
+
+    &-info_content {
+      display: grid;
+      grid-template-areas: 
+        'title title'
+        'text image';
+      justify-content: space-between;
+      padding: 128px 0 162.02px;
+
+      &-title {
+        grid-area: title;
+        text-align: center;
+        margin: 55px 0;
+      }
+
+      &-image {
+        grid-area: image;
+        width: 460px;
+        height: 529px;
+        margin-top: 3px;
+      }
+
+      &-text {
+        width: 701px;
+        grid-area: text;
+      }
+
+      &-paragraph {
+        line-height: 27.72px;
+
+        &:last-child {
+          font-weight: 600;
+          color: #5C5754;
+        }
+      }
+    }
   }
 </style>

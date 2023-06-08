@@ -1,9 +1,3 @@
-<script setup>
-  import { routes } from '../../data';
-  const route = useRoute();
-  const detail = routes.find(item => item.id == route.params.id);
-</script>
-
 <template>
   <div class="detail">
     <div class="detail-content container">
@@ -14,36 +8,56 @@
       </div>
       <img
         :src="detail.src"
-        alt="Almaty"
+        :alt="id"
         class="detail-content-image"
       />
     </div>
   </div>
 </template>
 
-<style scoped>
+<script setup>
+  import { defineProps } from 'vue';
+  import { routes } from '../../data';
+
+  const props = defineProps({
+    id: {
+      type: String,
+      required: true,
+    },
+  });
+
+  const route = useRoute();
+  const detail = routes.find(item => item.id == route.params.id);
+</script>
+
+<style scoped lang="scss">
   .detail {
     padding-top: 230px;
-  }
-  .detail-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 120px;
-  }
-  .detail-content-text {
-    margin: 30px 0 0 7.928%;
-  }
-  .detail-content-title {
-    line-height: 53px;
-    letter-spacing: .09em;
-    margin-bottom: 21px;
-  }
-  .detail-content-subtitle {
-    width: 313px;
-    margin: 0 0 64px .2083%;
-  }
-  .detail-content-paragraph {
-    width: 530px;
-    line-height: 25px;
+  
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+
+      &-text {
+        margin: 30px 0 0 7.928%;
+      }
+
+      &-title {
+        line-height: 53px;
+        letter-spacing: .09em;
+        margin-bottom: 21px;
+      }
+
+      &-subtitle {
+        width: 313px;
+        margin: 0 0 64px .2083%;
+      }
+      
+      &-paragraph {
+        width: 530px;
+        line-height: 25px;
+      }
+    }
   }
 </style>
