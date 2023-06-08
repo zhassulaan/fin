@@ -12,6 +12,74 @@
   </ul>
 </template>
 
+<script>
+  import { routes } from '../data';
+  export default {
+    props: ['city'],
+    data() {
+      return {
+        lines: [
+          {
+            id: 1,
+            src: `/line1.svg`,
+          },
+          {
+            id: 2,
+            src: `/line2.svg`,
+          },
+          {
+            id: 3,
+            src: `/line3.svg`,
+          },
+          {
+            id: 4,
+            src: `/line4.svg`,
+          },
+          {
+            id: 5,
+            src: `/line5.svg`,
+          },
+          {
+            id: 6,
+            src: `/line6.svg`,
+          },
+          {
+            id: 7,
+            src: `/line7.svg`,
+          },
+          {
+            id: 8,
+            src: `/line8.svg`,
+          },
+        ],
+        routes: routes,
+        combinedData: [],
+      };
+    },
+    created() {
+      this.combineData();
+    },
+    methods: {
+      combineData() {
+        const combined = [];
+        const last_index = this.routes.length - 1;
+
+        for (let i = 0; i < last_index; i++) {
+          if (this.routes[i]) {
+            combined.push(this.routes[i]);
+          }
+          if (this.lines[i]) {
+            combined.push(this.lines[i]);
+          }
+        }
+        combined.push(this.routes[last_index]);
+
+        this.combinedData = combined;
+      },
+    },
+  };
+</script>
+
 <style scoped>
   .route-place {
     z-index: 2;
@@ -90,71 +158,3 @@
     margin-top: -300px;
   }
 </style>
-
-<script>
-  import { routes } from '../data';
-  export default {
-    props: ['city'],
-    data() {
-      return {
-        lines: [
-          {
-            id: 1,
-            src: `/line1.svg`,
-          },
-          {
-            id: 2,
-            src: `/line2.svg`,
-          },
-          {
-            id: 3,
-            src: `/line3.svg`,
-          },
-          {
-            id: 4,
-            src: `/line4.svg`,
-          },
-          {
-            id: 5,
-            src: `/line5.svg`,
-          },
-          {
-            id: 6,
-            src: `/line6.svg`,
-          },
-          {
-            id: 7,
-            src: `/line7.svg`,
-          },
-          {
-            id: 8,
-            src: `/line8.svg`,
-          },
-        ],
-        routes: routes,
-        combinedData: [],
-      };
-    },
-    created() {
-      this.combineData();
-    },
-    methods: {
-      combineData() {
-        const combined = [];
-        const last_index = this.routes.length - 1;
-
-        for (let i = 0; i < last_index; i++) {
-          if (this.routes[i]) {
-            combined.push(this.routes[i]);
-          }
-          if (this.lines[i]) {
-            combined.push(this.lines[i]);
-          }
-        }
-        combined.push(this.routes[last_index]);
-
-        this.combinedData = combined;
-      },
-    },
-  };
-</script>

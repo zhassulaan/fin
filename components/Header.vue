@@ -46,7 +46,7 @@
   };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .header {
     position: fixed;
     display: flex;
@@ -58,21 +58,23 @@
     margin-top: 1.375em;
     z-index: 5;
     transition: all .25s;
+
+    &-list {
+      display: flex;
+      gap: 2.55208vw;
+
+      &-item {
+        display: flex;
+        gap: .68802vw;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
   }
   .active {
     margin-top: 0;
     background: #fff;
-  }
-  .header-list {
-    display: flex;
-    gap: 2.55208vw;
-  }
-  .header-list-item {
-    display: flex;
-    gap: .68802vw;
-    line-height: 22px;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
   }
 </style>

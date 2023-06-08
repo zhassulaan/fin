@@ -35,40 +35,40 @@
   };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .dropdown {
     position: relative;
-  }
 
-  .dropdown-header {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    cursor: pointer;
-  }
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      cursor: pointer;
+    }
 
-  .dropdown-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200%;
-    max-height: 250px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+    &-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200%;
+      max-height: 250px;
+      overflow-y: auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-  .dropdown-list-item {
-    display: list-item;
-    padding: 10px;
-    border: .4px solid #000;
-    cursor: pointer;
-  }
-
-  .dropdown-list-item:hover {
-    background-color: #f0f0f0;
+      &-item {
+        display: list-item;
+        padding: 10px;
+        border: .4px solid #000;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
   }
 </style>

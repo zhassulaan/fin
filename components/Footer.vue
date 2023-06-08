@@ -44,7 +44,7 @@
   </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   .footer_line {
     width: 100vw;
   }
@@ -54,31 +54,36 @@
     align-items: center;
     padding: 64.65px 0 51px;
     z-index: 5;
-  }
-  .footer-links {
-    display: grid;
-    gap: 50px;
-  }
-  .footer-links-city {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 9px;
-    width: 602px;
-  }
-  .footer-links-city-item,
-  .footer-links-menu-item {
-    line-height: 22px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .footer-links-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-links-menu-privacy {
-    line-height: 17px;
-    font-size: 14px;
-    font-weight: 500;
+
+    &-links {
+      display: grid;
+      gap: 50px;
+
+      &-city {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 9px;
+        width: 602px;
+      }
+
+      &-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-privacy {
+          line-height: 17px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+
+      &-city-item,
+      &-menu-item {
+        line-height: 22px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
   }
 </style>

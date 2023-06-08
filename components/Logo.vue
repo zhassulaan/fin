@@ -7,12 +7,6 @@
 	/>
 </template>
 
-<style scoped>
-  .logo {
-    background-blend-mode: darken;
-  }
-</style>
-
 <script>
   export default {
     methods: {
@@ -22,3 +16,9 @@
     }
   };
 </script>
+
+<style scoped>
+  .logo {
+    background-blend-mode: darken;
+  }
+</style>
