@@ -20,7 +20,7 @@
         <br />
         <p class="main-about_content-paragraph">Надеемся, что наша экскурсия поможет вам в осмыслении исторического прошлого своего народа и сохранении достойной памяти о нем!</p>
       </div>
-      <a :href="path" download="" target='_blank' class="main-about_content-download">
+      <a href="~/public/document.pdf" download class="main-about_content-download">
         <p class="main-about_content-download-text">Скачать маршрут: Увлекательный маршрут по городу</p>
         <img
           src="~/public/file.svg"
@@ -137,13 +137,3 @@
     margin: 55px 0;
   }
 </style>
-
-<script>
-  export default {
-    data() {
-      return {
-        path: '~/assets/document.pdf',
-      };
-    },
-  };
-</script>
