@@ -1,11 +1,11 @@
 <template>
   <ul>
-    <li v-for="image, idx in combinedData" :key="idx">
-      <NuxtLink :to="`${city}/${image.id}`">
+    <li v-for="routes, idx in combinedData" :key="idx">
+      <NuxtLink :to="`${city}/${routes.id}`">
         <img
-          :src="image.src"
-          :alt="image.name || 'line'"
-          :class="image.name ? `route-place route-image${ idx }` : `route-line route-image${ idx }`"
+          :src="routes.src"
+          :alt="routes.name || 'line'"
+          :class="routes.name ? `route-place route-image${ idx }` : `route-line route-image${ idx }`"
         />
       </NuxtLink>
     </li>
@@ -92,6 +92,7 @@
 </style>
 
 <script>
+  import { routes } from '../data';
   export default {
     props: ['city'],
     data() {
@@ -130,53 +131,7 @@
             src: `/line8.svg`,
           },
         ],
-        images: [
-          {
-            id: 1,
-            name: "Роща Баума",
-            src: `/route1.svg`,
-          },
-          {
-            id: 2,
-            name: "Дом Баума",
-            src: `/route2.svg`,
-          },
-          {
-            id: 3,
-            name: "Академия наук",
-            src: `/route3.svg`,
-          },
-          {
-            id: 4,
-            name: "Памятник Г.К. Бельгеру",
-            src: `/route4.svg`,
-          },
-          {
-            id: 5,
-            name: "Немецкий Дом",
-            src: `/route5.svg`,
-          },
-          {
-            id: 6,
-            name: "Мемориальная доска Э.Ф. Айрих.",
-            src: `/route6.svg`,
-          },
-          {
-            id: 7,
-            name: "Стадион «Динамо»",
-            src: `/route7.svg`,
-          },
-          {
-            id: 8,
-            name: "Казахстанско-Немецкий университет",
-            src: `/route8.svg`,
-          },
-          {
-            id: 9,
-            name: "Музеи",
-            src: `/route9.svg`,
-          },
-        ],
+        routes: routes,
         combinedData: [],
       };
     },
@@ -186,17 +141,17 @@
     methods: {
       combineData() {
         const combined = [];
-        const last_index = this.images.length - 1;
+        const last_index = this.routes.length - 1;
 
         for (let i = 0; i < last_index; i++) {
-          if (this.images[i]) {
-            combined.push(this.images[i]);
+          if (this.routes[i]) {
+            combined.push(this.routes[i]);
           }
           if (this.lines[i]) {
             combined.push(this.lines[i]);
           }
         }
-        combined.push(this.images[last_index]);
+        combined.push(this.routes[last_index]);
 
         this.combinedData = combined;
       },

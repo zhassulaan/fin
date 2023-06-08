@@ -14,41 +14,13 @@
 </template>
 
 <script>
+  import { cities } from '../data';
   export default {
     data() {
       return {
         isOpen: false,
         selectedCity: 'Select a city',
-        cities: [
-          {
-            name: 'Петропавловск',
-            id: 'petropavlovsk',
-          },
-          {
-            name: 'Тараз',
-            id: 'taraz',
-          },
-          {
-            name: 'Семей',
-            id: 'semey',
-          },
-          {
-            name: 'Усть-Каменогорск',
-            id: 'ust-kamenogorsk',
-          },
-          {
-            name: 'Павлодар',
-            id: 'pavlodar',
-          },
-          {
-            name: 'Караганда',
-            id: 'karaganda',
-          },
-          {
-            name: 'Актобе',
-            id: 'aktobe',
-          },
-        ],
+        cities: cities,
       };
     },
     methods: {

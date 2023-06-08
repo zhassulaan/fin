@@ -45,3 +45,42 @@ export const routes = [
 		src: `/route9.svg`,
 	},
 ];
+
+export const cities = [
+	{
+		name: 'Алматы',
+		id: 'almaty',
+	},
+	{
+		name: 'Петропавловск',
+		id: 'petropavlovsk',
+	},
+	{
+		name: 'Тараз',
+		id: 'taraz',
+	},
+	{
+		name: 'Астана',
+		id: 'astana',
+	},
+	{
+		name: 'Семей',
+		id: 'semey',
+	},
+	{
+		name: 'Усть-Каменогорск',
+		id: 'ust-kamenogorsk',
+	},
+	{
+		name: 'Павлодар',
+		id: 'pavlodar',
+	},
+	{
+		name: 'Караганда',
+		id: 'karaganda',
+	},
+	{
+		name: 'Актобе',
+		id: 'aktobe',
+	},
+];
