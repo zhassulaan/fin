@@ -1,11 +1,13 @@
 <template>
   <ul>
     <li v-for="image, idx in combinedData" :key="idx">
-      <img
-        :src="image.src"
-        :alt="image.name || 'line'"
-        :class="image.name ? `route-place route-image${ idx }` : `route-line route-image${ idx }`"
-      />
+      <NuxtLink :to="`${city}/${image.id}`">
+        <img
+          :src="image.src"
+          :alt="image.name || 'line'"
+          :class="image.name ? `route-place route-image${ idx }` : `route-line route-image${ idx }`"
+        />
+      </NuxtLink>
     </li>
   </ul>
 </template>
@@ -91,6 +93,7 @@
 
 <script>
   export default {
+    props: ['city'],
     data() {
       return {
         lines: [

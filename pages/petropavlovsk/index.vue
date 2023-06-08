@@ -2,19 +2,19 @@
   <div class="main">
     <div class="main-hero_content container">
       <div class="main-hero_content-text">
-        <h1 class="main-hero_content-title title">Астана</h1>
+        <h1 class="main-hero_content-title title">Петропавловск</h1>
         <Subtitle class="main-hero_content-subtitle title" :text="'прогулка по «немецкой» истории города'" />
       </div>
       <img
         src="~/public/almaty1.svg"
-        alt="Astana"
+        alt="Petropavlovsk"
         class="main-hero_content-image"
       />
     </div>
     <div class="main-about_content container">
       <img
         src="~/public/almaty2.svg"
-        alt="Astana"
+        alt="Petropavlovsk"
         class="main-about_content-image"
       />
       <div class="main-about_content-text">
@@ -35,7 +35,7 @@
     </div>
     <div class="main-route_content container">
       <h3 class="main-route_content-title title">Увлекательный маршрут по городу</h3>
-      <Route :city="'astana'"/>
+      <Route :city="'petropavlovsk'"/>
     </div>
     <div class="main-info_content container">
       <h3 class="main-info_content-title title">текст с заголовком</h3>
@@ -48,7 +48,7 @@
       </div>
       <img
         src="~/public/almaty2.svg"
-        alt="Astana"
+        alt="Petropavlovsk"
         class="main-info_content-image"
       />
     </div>

@@ -6,7 +6,5 @@ export default defineNuxtConfig({
     "@": resolve(__dirname, "/"),
   },
   css: ["~/assets/main.scss"],
-  plugins: [
-    { src: '~/plugins/yandex-maps.js',  mode: 'client' }
-  ],
+  ssr: true,
 });

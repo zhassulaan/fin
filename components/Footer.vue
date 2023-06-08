@@ -1,12 +1,12 @@
 <template>
   <img
-    src="@/footer_line.svg"
+    src="~/public/footer_line.svg"
     alt="footer line"
     class="footer_line"
   />
   <footer class="footer container">
     <img
-      src="@/logo.svg"
+      src="~/public/logo.svg"
       alt="Logo"
       class="footer-logo"
     />

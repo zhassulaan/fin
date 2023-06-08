@@ -1,7 +1,7 @@
 <template>
-  <header class="header container">
+  <header class="header" :class="{ 'active': scrolled }">
     <img
-      src="@/logo.svg"
+      src="~/public/logo.svg"
       alt="Logo"
       class="header-logo"
     />
@@ -15,7 +15,7 @@
       <li class="header-list-item">
         <NuxtLink to="/">Другие</NuxtLink>
         <img
-          src="@/arrow.svg"
+          src="~/public/arrow.svg"
           alt="arrow"
         />
       </li>
@@ -32,9 +32,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 63.3334%;
-    height: 152px;
+    width: 100%;
+    padding: 15px 18.3334%;
+    height: 182px;
     margin-top: 30px;
+    z-index: 5;
+    transition: all .3s;
+  }
+  .active {
+    margin-top: 0;
+    background: #fff;
   }
   .header-logo {
     background-blend-mode: darken;
@@ -52,3 +59,26 @@
     font-weight: 600;
   }
 </style>
+
+<script>
+  export default {
+    data() {
+      return {
+        scrolled: false,
+      }
+    },
+    mounted() {
+      window?.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+      window?.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      handleScroll(event) {
+        event.preventDefault(); 
+        const scrollPosition = window?.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        this.scrolled = scrollPosition > 15;
+      }
+    }
+  };
+</script>
