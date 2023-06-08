@@ -5,11 +5,7 @@
     class="footer_line"
   />
   <footer class="footer container">
-    <img
-      src="~/public/logo.svg"
-      alt="Logo"
-      class="footer-logo"
-    />
+    <Logo />
     <div class="footer-links">
       <ul class="footer-links-city">
         <li class="footer-links-city-item">
@@ -58,9 +54,6 @@
     align-items: center;
     padding: 64.65px 0 51px;
     z-index: 5;
-  }
-  .footer-logo {
-    background-blend-mode: darken;
   }
   .footer-links {
     display: grid;

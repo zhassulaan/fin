@@ -1,10 +1,6 @@
 <template>
   <header class="header" :class="{ 'active': scrolled }">
-    <img
-      src="~/public/logo.svg"
-      alt="Logo"
-      class="header-logo"
-    />
+    <Logo />
     <ul class="header-list">
       <li class="header-list-item">
         <NuxtLink to="/almaty">Алматы</NuxtLink>
@@ -43,9 +39,6 @@
     margin-top: 0;
     background: #fff;
   }
-  .header-logo {
-    background-blend-mode: darken;
-  }
   .header-list {
     display: flex;
     gap: 49px;
@@ -78,7 +71,7 @@
         event.preventDefault(); 
         const scrollPosition = window?.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         this.scrolled = scrollPosition > 15;
-      }
+      },
     }
   };
 </script>

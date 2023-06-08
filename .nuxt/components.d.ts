@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
+    'Logo': typeof import("../components/Logo.vue")['default']
     'Route': typeof import("../components/Route.vue")['default']
     'Subtitle': typeof import("../components/Subtitle.vue")['default']
     'Swiper': typeof import("../components/Swiper.vue")['default']
@@ -26,6 +27,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
+    'LazyLogo': typeof import("../components/Logo.vue")['default']
     'LazyRoute': typeof import("../components/Route.vue")['default']
     'LazySubtitle': typeof import("../components/Subtitle.vue")['default']
     'LazySwiper': typeof import("../components/Swiper.vue")['default']
@@ -52,6 +54,7 @@ declare module 'vue' {
 
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
+export const Logo: typeof import("../components/Logo.vue")['default']
 export const Route: typeof import("../components/Route.vue")['default']
 export const Subtitle: typeof import("../components/Subtitle.vue")['default']
 export const Swiper: typeof import("../components/Swiper.vue")['default']
@@ -75,6 +78,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
+export const LazyLogo: typeof import("../components/Logo.vue")['default']
 export const LazyRoute: typeof import("../components/Route.vue")['default']
 export const LazySubtitle: typeof import("../components/Subtitle.vue")['default']
 export const LazySwiper: typeof import("../components/Swiper.vue")['default']
