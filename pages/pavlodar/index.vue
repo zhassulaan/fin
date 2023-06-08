@@ -46,11 +46,7 @@
         <br />
         <p class="main-info_content-paragraph">Надеемся, что наша экскурсия поможет вам в осмыслении исторического прошлого своего народа и сохранении достойной памяти о нем!</p>
       </div>
-      <img
-        src="~/public/almaty2.svg"
-        alt="Pavlodar"
-        class="main-info_content-image"
-      />
+      <Swiper class="main-info_content-image" />
     </div>
   </div>
 </template>
@@ -86,8 +82,10 @@
     padding-top: 160px;
   }
   .main-about_content-image,
-  .main-info_content-image {
+ .main-info_content-image {
     grid-area: image;
+    width: 460px;
+	  height: 529px;
     margin-top: 3px;
   }
   .main-about_content-text,
