@@ -9,11 +9,7 @@
         <NuxtLink to="/astana">Астана</NuxtLink>
       </li>
       <li class="header-list-item">
-        <NuxtLink to="/">Другие</NuxtLink>
-        <img
-          src="~/public/arrow.svg"
-          alt="arrow"
-        />
+        <Dropdown />
       </li>
       <li class="header-list-item">
         <NuxtLink to="/about">О нас</NuxtLink>
@@ -54,7 +50,12 @@
 </style>
 
 <script>
+  import Dropdown from '~/components/Dropdown.vue';
+
   export default {
+    components: {
+      Dropdown,
+    },
     data() {
       return {
         scrolled: false,
