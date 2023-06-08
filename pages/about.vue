@@ -21,7 +21,7 @@
 
 <style scoped>
   .about {
-    padding-top: 189px;
+    padding-top: 99px;
   }
   .about-content {
     display: flex;
