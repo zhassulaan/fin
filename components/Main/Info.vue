@@ -59,7 +59,7 @@
 		}
 	}
 
-	@media screen and (min-width: 1600px) {
+	@media screen and (max-width: 1600px) {
 			.main-info_content {
 				&-image {
 					width: 28.4375vw;

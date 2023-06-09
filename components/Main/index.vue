@@ -12,10 +12,7 @@
       />
     </div>
     <About />
-    <div class="main-route_content container">
-      <h3 class="main-route_content-title title">Увлекательный маршрут по городу</h3>
-      <Route :city="id"/>
-    </div>
+    <Route :city="id"/>
     <Info />
   </div>
 </template>
@@ -24,7 +21,7 @@
   import Info from '~/components/Main/Info.vue';
   import About from '~/components/Main/About.vue';
   import Subtitle from '~/components/Subtitle.vue';
-  import Route from '~/components/Route.vue';
+  import Route from '~/components/Main/Route.vue';
 
   export default {
     props: ['title', 'id'],
@@ -68,19 +65,9 @@
         width: 37.76042vw;
       }
     }
-
-    &-route_content {
-      margin-top: 157px;
-
-      &-title {
-        text-align: center;
-        line-height: 31px;
-        margin-bottom: 41px;
-      }
-    }
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (max-width: 1600px) {
     .main {
       &-hero_content {
         padding: 25.1765vh 14.5625vw 11.7647vh 16.69785vw;

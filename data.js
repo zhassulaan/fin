@@ -93,3 +93,38 @@ export const cities = [
 		id: 'aktobe',
 	},
 ];
+
+export const lines = [
+	{
+		id: 1,
+		src: `/line1.svg`,
+	},
+	{
+		id: 2,
+		src: `/line2.svg`,
+	},
+	{
+		id: 3,
+		src: `/line3.svg`,
+	},
+	{
+		id: 4,
+		src: `/line4.svg`,
+	},
+	{
+		id: 5,
+		src: `/line5.svg`,
+	},
+	{
+		id: 6,
+		src: `/line6.svg`,
+	},
+	{
+		id: 7,
+		src: `/line7.svg`,
+	},
+	{
+		id: 8,
+		src: `/line8.svg`,
+	},
+];
