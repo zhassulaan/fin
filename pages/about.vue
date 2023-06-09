@@ -36,11 +36,11 @@
     margin-bottom: 21px;
   }
   .about-content-subtitle {
-    width: 313px;
+    width: 16.30208vw;
     margin: 0 0 200px .2083%;
   }
   .about-content-paragraph {
-    width: 530px;
+    width: 27.60417vw;
     line-height: 25px;
   }
   .about-content-image {

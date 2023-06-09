@@ -2,7 +2,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="image in images" :key="image.id">
-        <img :src="image.src" :alt="image.alt">
+        <img :src="image.src" :alt="image.alt" class="swiper-slide-image"/>
       </div>
     </div>
   </div>
@@ -50,13 +50,11 @@
 		height: 100%;
 		overflow: hidden;
 	}
-
 	.swiper-wrapper {
 		display: flex;
 	}
-	.swiper-slide img {
+	.swiper-slide-image {
 		width: 100%;
-		height: 100%;
 		object-fit: cover;
 	}
 </style>

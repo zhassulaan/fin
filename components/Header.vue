@@ -77,4 +77,10 @@
     margin-top: 0;
     background: #fff;
   }
+
+  @media screen and (min-width: 1600px) {
+    .header {
+      padding: 0 13.125vw;
+    }
+  }
 </style>
