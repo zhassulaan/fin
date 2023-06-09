@@ -19,40 +19,43 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   .about {
     padding-top: 99px;
+
+    &-content {
+      display: flex;
+      margin-bottom: 148px;
+
+      &-text {
+        margin: 30px 0 0 7.928%;
+      }
+
+      &-title {
+        line-height: 53px;
+        letter-spacing: .09em;
+        margin-bottom: 21px;
+      }
+
+      &-subtitle {
+        width: 16.30208vw;
+        margin: 0 0 200px .2083%;
+      }
+
+      &-paragraph {
+        width: 27.60417vw;
+        line-height: 25px;
+      }
+
+      &-image {
+        position: absolute;
+        width: 80.9375vw;
+        left: 6.771vw;
+      }
+    }
   }
-  .about-content {
-    display: flex;
-    margin-bottom: 148px;
-  }
-  .about-content-text {
-    margin: 30px 0 0 7.928%;
-  }
-  .about-content-title {
-    line-height: 53px;
-    letter-spacing: .09em;
-    margin-bottom: 21px;
-  }
-  .about-content-subtitle {
-    width: 16.30208vw;
-    margin: 0 0 200px .2083%;
-  }
-  .about-content-paragraph {
-    width: 27.60417vw;
-    line-height: 25px;
-  }
-  .about-content-image {
-    position: absolute;
-    left: 6.771%;
-  }
-  .header-list-item {
-    display: flex;
-    gap: 13px;
-    line-height: 22px;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
+
+  @media screen and (max-width: 1600px) {
+    
   }
 </style>

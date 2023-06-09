@@ -27,7 +27,6 @@
       };
     },
     created() {
-      // Customize the logic to determine whether to show or hide the header and footer
       if (this.$route.path === '/about') {
         this.show = false;
       }
