@@ -54,8 +54,4 @@
       }
     }
   }
-
-  @media screen and (max-width: 1600px) {
-    
-  }
 </style>

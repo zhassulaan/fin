@@ -71,6 +71,7 @@
       }
 
       &-place {
+        width: 20.20833vw;
         z-index: 2;
       }
 
